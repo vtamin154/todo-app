@@ -1,38 +1,132 @@
-.App {
+@font-face {
+  font-family: 'Pangolin', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+}
+
+.done {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.heading {
+  text-align: center;
+
+  width: 30rem;
+  margin: 10px auto;
+}
+/* TODO */
+.todo {
+  margin: 20px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* TASK */
+.tasks {
+  background-color: #fef3c7;
+  text-align: left;
+
+  width: 30rem;
+  min-height: 30rem;
+  margin: 10px auto;
+
+  font-family: 'Pangolin', cursive;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* TASKCOVER */
+.listTodo {
+  list-style: none;
+  margin-right: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.listTodo li,
+.filter label {
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.listTodo li {
+  border-bottom: 1px solid #ffda7c;
+  margin-top: 15px;
+  line-height: 40px;
+
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.listTodo li .display {
+  display: none;
+}
+
+.listTodo li:hover .display {
+  display: block;
+  color: #b45309;
+  font-size: 16px;
+}
+
+.listTodo .display:hover {
+  display: inline-block;
+}
+
+/* FORM */
+.form {
+  margin: 20px 0 30px 0;
+}
+.form input {
+  padding: 0.75rem;
+  border: 2px solid #fbbf24;
+  border-radius: 0.5rem;
+
+  width: 23.5rem;
+  margin-right: 5px;
+  line-height: 20px;
+  padding: 12px;
+
+  font-size: 14px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #b45309;
+}
+
+.form button {
   color: white;
+  font-size: 18px;
+  border: 2px solid #10b981;
+
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  background: #10b981;
+
+  width: 4.5rem;
+  font-weight: 700;
+
+  cursor: pointer;
+  line-height: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.form button:hover {
+  background-color: #25cc94;
+  border-color: #25cc94;
+  box-shadow: #dddddd 1px 4px 10px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FILTER */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 40px 0px 40px;
+  line-height: 24px;
+}
+.filter label {
+  color: #b45309;
+}
+.filter select {
+  border: 2px solid #b45309;
+  border-radius: 8px;
+
+  padding: 0.25rem;
+  font-size: 1rem;
 }
